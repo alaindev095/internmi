@@ -1,0 +1,279 @@
+
+.school-sidebar {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-right: 1px solid #e9e9ed;
+  color: #25252b;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+
+.school-sidebar-navigation {
+  flex: 1;
+  padding: 24px 12px 18px;
+}
+
+.school-nav-group + .school-nav-group {
+  margin-top: 30px;
+}
+
+.school-nav-heading {
+  margin: 0 8px 12px;
+  color: #9999a5;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.15px;
+  line-height: 1.4;
+}
+
+.school-nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.school-nav-link {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 11px;
+  border-radius: 9px;
+  color: #696977;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 550;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.school-nav-link:hover {
+  background: #f5f4f8;
+  color: #27242e;
+}
+
+.school-nav-link:focus-visible {
+  outline: 2px solid #7861ff;
+  outline-offset: 2px;
+}
+
+.school-nav-link-active {
+  background: #202023;
+  color: #ffffff;
+  font-weight: 650;
+}
+
+.school-nav-link-active:hover {
+  background: #303034;
+  color: #ffffff;
+}
+
+.school-nav-icon {
+  flex-shrink: 0;
+}
+
+.school-nav-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.school-nav-chevron {
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-3px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.school-nav-link:hover .school-nav-chevron,
+.school-nav-link-active .school-nav-chevron {
+  opacity: 0.85;
+  transform: translateX(0);
+}
+
+.school-sidebar-bottom {
+  flex-shrink: 0;
+  padding: 12px;
+  border-top: 1px solid #f0f0f3;
+  background: #ffffff;
+}
+
+.school-help-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ececf0;
+  border-radius: 11px;
+  background: #fafafd;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+.school-help-card:hover {
+  background: #f5f4fa;
+  border-color: #dfdce9;
+}
+
+.school-help-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #efedf8;
+  color: #5142bf;
+}
+
+.school-help-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 2px;
+}
+
+.school-help-text strong {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.school-help-text > span {
+  color: #898994;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.school-help-arrow {
+  flex-shrink: 0;
+  margin-top: 8px;
+  color: #a0a0aa;
+}
+
+.school-logout-button {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #777783;
+  font: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.school-logout-button:hover {
+  background: #fff0f0;
+  color: #c33b43;
+}
+
+.school-account {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 8px;
+  padding: 12px 2px 2px;
+  border-top: 1px solid #eeeeF2;
+}
+
+.school-account-avatar {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #252529;
+  color: #ffffff;
+}
+
+.school-account-details {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.school-account-details strong {
+  overflow: hidden;
+  color: #303038;
+  font-size: 11px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.school-account-details span {
+  overflow: hidden;
+  color: #92929d;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.school-account-menu {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #888894;
+  cursor: pointer;
+}
+
+.school-account-menu:hover {
+  background: #f0eff5;
+  color: #25252b;
+}
+
+@media (max-width: 900px) {
+  .school-sidebar {
+    width: 240px;
+    min-width: 240px;
+    min-height: 100%;
+    border-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .school-sidebar-navigation {
+    padding-top: 18px;
+  }
+
+  .school-sidebar-bottom {
+    padding-bottom: 16px;
+  }
+}

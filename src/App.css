@@ -1,0 +1,26 @@
+/* Base page setup to eliminate scrolling/margins */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Vertical layout wrapper */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Side-by-side content area */
+.app-body {
+  display: flex;
+  flex: 1; /* Pushes the footer down by consuming remaining space */
+}
+
+/* Optional responsive tweak for mobile screens */
+@media (max-width: 768px) {
+  .app-body {
+    flex-direction: column; /* Stack sidebar on top of main content on mobile */
+  }
+}

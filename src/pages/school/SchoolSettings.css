@@ -1,0 +1,470 @@
+.school-settings-page {
+  padding-bottom: 32px;
+}
+
+.school-settings-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.school-settings-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #6547ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.school-settings-heading h1 {
+  margin: 0 0 8px;
+  color: #171717;
+  font-size: 28px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.school-settings-heading p {
+  margin: 0;
+  color: #777783;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.school-settings-reset,
+.school-settings-save,
+.school-settings-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 0 15px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.school-settings-reset {
+  border: 1px solid #e6e5ed;
+  background: #fff;
+  color: #494854;
+}
+
+.school-settings-reset:hover {
+  background: #f7f6fb;
+}
+
+.school-settings-layout {
+  display: grid;
+  grid-template-columns: 235px minmax(0, 1fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.school-settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid #ecebf1;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.school-settings-tab {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #656572;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.school-settings-tab svg {
+  flex-shrink: 0;
+}
+
+.school-settings-tab:hover {
+  background: #f7f6fb;
+  color: #292633;
+}
+
+.school-settings-tab.active {
+  background: #f0edff;
+  color: #6547ff;
+}
+
+.school-settings-help {
+  margin-top: 16px;
+  padding: 15px 12px;
+  border-top: 1px solid #efedf3;
+  color: #6547ff;
+}
+
+.school-settings-help strong {
+  display: block;
+  margin-top: 10px;
+  color: #292633;
+  font-size: 12px;
+}
+
+.school-settings-help p {
+  margin: 7px 0 0;
+  color: #777783;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.school-settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.school-settings-card {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid #ecebf1;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 3px 14px rgb(20 20 40 / 2%);
+}
+
+.school-settings-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 27px;
+}
+
+.school-settings-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #f0edff;
+  color: #6547ff;
+}
+
+.school-settings-section-heading h2 {
+  margin: 0 0 5px;
+  color: #22212b;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.school-settings-section-heading p,
+.school-settings-description {
+  margin: 0;
+  color: #7c7b87;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.school-settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 21px 18px;
+}
+
+.school-settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  color: #3e3d49;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.school-settings-full {
+  grid-column: 1 / -1;
+}
+
+.school-settings-field input,
+.school-settings-field select {
+  width: 100%;
+  min-width: 0;
+  min-height: 43px;
+  padding: 0 12px;
+  border: 1px solid #e6e5ed;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #292833;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.school-settings-field input:focus,
+.school-settings-field select:focus {
+  border-color: #8c79ff;
+  box-shadow: 0 0 0 3px rgb(101 71 255 / 10%);
+}
+
+.school-settings-subsection h3,
+.school-settings-password-form h3 {
+  margin: 0 0 7px;
+  color: #282733;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.school-settings-trades {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin-top: 16px;
+}
+
+.school-settings-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 43px;
+  padding: 0 12px;
+  border: 1px solid #e9e8ef;
+  border-radius: 8px;
+  color: #454450;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.school-settings-check input {
+  width: 15px;
+  height: 15px;
+  accent-color: #6547ff;
+}
+
+.school-settings-divider {
+  height: 1px;
+  margin: 24px 0;
+  background: #efedf3;
+}
+
+.school-settings-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 17px 0;
+  border-bottom: 1px solid #f0eff4;
+}
+
+.school-settings-toggle-row:last-child {
+  border-bottom: 0;
+}
+
+.school-settings-toggle-row strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #34333f;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.school-settings-toggle-row p {
+  margin: 0;
+  color: #858490;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.school-settings-switch {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 24px;
+  padding: 3px;
+  border: 0;
+  border-radius: 20px;
+  background: #d9d8e1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.school-settings-switch span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 15%);
+  transition: transform 0.2s;
+}
+
+.school-settings-switch.on {
+  background: #6547ff;
+}
+
+.school-settings-switch.on span {
+  transform: translateX(18px);
+}
+
+.school-settings-note {
+  margin: 17px 0 0;
+  padding: 12px 14px;
+  border: 1px solid #eeebff;
+  border-radius: 8px;
+  background: #faf9ff;
+  color: #706c8b;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.school-settings-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  max-width: 500px;
+}
+
+.school-settings-password-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.school-settings-password-input input {
+  padding-right: 42px;
+}
+
+.school-settings-eye {
+  position: absolute;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #777583;
+  cursor: pointer;
+}
+
+.school-settings-eye:hover {
+  background: #f3f1fa;
+}
+
+.school-settings-secondary-button {
+  align-self: flex-start;
+  border: 1px solid #e4e1f3;
+  background: #fff;
+  color: #5541c5;
+}
+
+.school-settings-secondary-button:hover {
+  background: #f8f6ff;
+}
+
+.school-settings-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 17px 20px;
+  border: 1px solid #ecebf1;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.school-settings-save-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #858490;
+  font-size: 12px;
+}
+
+.school-settings-save-status.success {
+  color: #188653;
+}
+
+.school-settings-save {
+  border: 1px solid #6547ff;
+  background: #6547ff;
+  color: #fff;
+}
+
+.school-settings-save:hover {
+  background: #5236e8;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 950px) {
+  .school-settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .school-settings-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .school-settings-help {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .school-settings-heading {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .school-settings-heading h1 {
+    font-size: 24px;
+  }
+
+  .school-settings-reset {
+    align-self: flex-start;
+  }
+
+  .school-settings-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .school-settings-card {
+    padding: 18px 15px;
+  }
+
+  .school-settings-form-grid,
+  .school-settings-trades {
+    grid-template-columns: 1fr;
+  }
+
+  .school-settings-full {
+    grid-column: auto;
+  }
+
+  .school-settings-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .school-settings-save {
+    width: 100%;
+  }
+}

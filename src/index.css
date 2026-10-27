@@ -1,0 +1,401 @@
+
+/* ========================================
+   INTERNMI — GLOBAL STYLES
+   ======================================== */
+
+/* 1. Design tokens */
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+
+  --bg: #ffffff;
+  --bg-soft: #f8f8fa;
+  --bg-hover: #f3f3f5;
+
+  --border: #e5e4e7;
+  --border-strong: #d7d5dc;
+
+  --code-bg: #f4f3ec;
+
+  --accent: #6547ff;
+  --accent-hover: #5134e8;
+  --accent-bg: rgba(101, 71, 255, 0.08);
+  --accent-border: rgba(101, 71, 255, 0.35);
+
+  --success: #16803c;
+  --danger: #dc2626;
+  --warning: #b7791f;
+
+  --shadow:
+    0 10px 25px rgba(0, 0, 0, 0.05),
+    0 2px 6px rgba(0, 0, 0, 0.03);
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  --nav-height: 72px;
+  --sidebar-width: 250px;
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 2. Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: var(--bg);
+}
+
+/* 3. Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: var(--heading);
+  color: var(--text-h);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+small {
+  font-size: 0.875rem;
+}
+
+strong {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+/* 4. Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* 5. Buttons and form controls */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+input,
+textarea,
+select {
+  max-width: 100%;
+  color: var(--text-h);
+  background: var(--bg);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9995a1;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* 6. Images and media */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+button img {
+  display: inline-block;
+}
+
+/* 7. Lists */
+ul,
+ol {
+  padding-left: 24px;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+/* 8. Dividers */
+hr {
+  height: 1px;
+  margin: 24px 0;
+  border: 0;
+  background: var(--border);
+}
+
+/* 9. Code */
+code,
+pre,
+.counter {
+  font-family: var(--mono);
+}
+
+code {
+  padding: 3px 6px;
+  border-radius: 5px;
+  background: var(--code-bg);
+  color: var(--text-h);
+  font-size: 0.9em;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-soft);
+}
+
+/* 10. Main app layout */
+.App-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.app-body {
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: stretch;
+  background: var(--bg);
+}
+
+/* Keep page content from shrinking unexpectedly */
+.app-body > * {
+  min-width: 0;
+}
+
+/* Main content area */
+main,
+.main-content {
+  min-width: 0;
+  flex: 1;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* 11. Shared surfaces */
+.card,
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.card {
+  padding: 20px;
+}
+
+.panel {
+  padding: 24px;
+}
+
+/* 12. Utility classes */
+.text-primary {
+  color: var(--text-h);
+}
+
+.text-muted {
+  color: var(--text);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-white {
+  background: #ffffff;
+}
+
+.bg-soft {
+  background: var(--bg-soft);
+}
+
+.border {
+  border: 1px solid var(--border);
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+/* 13. Scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d5d2dc transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #d5d2dc;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 14. Responsive layout */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 72px;
+    --sidebar-width: 0px;
+  }
+
+  .app-body {
+    flex-direction: column;
+  }
+
+  .app-body > * {
+    max-width: 100%;
+  }
+
+  main,
+  .main-content {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}
+
+/* 15. Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

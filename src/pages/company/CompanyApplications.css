@@ -1,0 +1,322 @@
+
+.company-applications-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.company-application-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 26px 0;
+}
+
+.company-application-stat {
+  padding: 19px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.company-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #777;
+  font-size: 12px;
+}
+
+.company-stat-top svg {
+  flex-shrink: 0;
+  padding: 8px;
+  width: 34px;
+  height: 34px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 9px;
+  color: #444;
+}
+
+.company-application-stat > strong {
+  display: block;
+  margin-top: 14px;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.company-applications-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.company-applications-search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  height: 44px;
+  padding: 0 13px;
+  border: 1px solid #e5e5e5;
+  border-radius: 9px;
+  color: #777;
+}
+
+.company-applications-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #171717;
+  font: inherit;
+  font-size: 13px;
+}
+
+.company-applications-filter {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #777;
+  font-size: 12px;
+}
+
+.company-applications-filter select,
+.company-status-select select {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  font: inherit;
+  font-size: 12px;
+}
+
+.company-applications-filter select {
+  height: 44px;
+  padding: 0 12px;
+}
+
+.company-applications-panel {
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.company-applications-panel-heading {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.company-applications-panel-heading h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.company-applications-panel-heading p {
+  margin: 7px 0 0;
+  color: #888;
+  font-size: 12px;
+}
+
+.company-applications-list {
+  display: grid;
+}
+
+.company-application-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.company-application-row:last-child {
+  border-bottom: 0;
+}
+
+.company-candidate-avatar {
+  display: grid;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #444;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.company-candidate-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.company-candidate-info h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.company-candidate-info p {
+  margin: 6px 0 4px;
+  color: #555;
+  font-size: 12px;
+}
+
+.company-candidate-info > span,
+.company-candidate-info small {
+  display: block;
+  margin-top: 4px;
+  color: #888;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.company-candidate-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.company-application-status {
+  padding: 6px 9px;
+  border-radius: 20px;
+  background: #f2f2f2;
+  color: #555;
+  font-size: 10px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.status-pending {
+  background: #f2f2f2;
+  color: #555;
+}
+
+.status-reviewing {
+  background: #fff3d9;
+  color: #8b5a00;
+}
+
+.status-shortlisted {
+  background: #e8f5ec;
+  color: #267341;
+}
+
+.status-accepted {
+  background: #e5f1ff;
+  color: #245e9b;
+}
+
+.status-rejected {
+  background: #ffebeb;
+  color: #a12d2d;
+}
+
+.company-status-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.company-status-select select {
+  max-width: 125px;
+  min-height: 36px;
+  padding: 0 25px 0 9px;
+  appearance: none;
+}
+
+.company-status-select > svg {
+  position: absolute;
+  right: 8px;
+  pointer-events: none;
+  color: #777;
+}
+
+.company-view-application {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fff;
+  color: #444;
+  cursor: pointer;
+}
+
+.company-view-application:hover {
+  background: #f6f6f6;
+}
+
+.company-applications-empty {
+  padding: 50px 20px;
+  color: #777;
+  text-align: center;
+}
+
+.company-applications-empty h3 {
+  color: #171717;
+  font-size: 16px;
+}
+
+.company-applications-empty p {
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .company-application-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .company-application-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .company-candidate-info {
+    flex-basis: calc(100% - 60px);
+  }
+
+  .company-candidate-actions {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 58px;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-applications-toolbar {
+    flex-direction: column;
+  }
+
+  .company-applications-filter {
+    justify-content: space-between;
+  }
+
+  .company-applications-filter select {
+    flex: 1;
+  }
+
+  .company-application-row {
+    gap: 10px;
+  }
+
+  .company-candidate-actions {
+    gap: 7px;
+    padding-left: 0;
+  }
+
+  .company-application-status {
+    margin-right: auto;
+  }
+}

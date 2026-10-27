@@ -1,0 +1,116 @@
+
+.company-internship-form-page {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.internship-form-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.company-internship-form {
+  margin-top: 24px;
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.internship-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.internship-form-section h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.company-internship-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.company-internship-form input,
+.company-internship-form select,
+.company-internship-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+  font: inherit;
+}
+
+.company-internship-form textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.company-internship-form input:focus,
+.company-internship-form select:focus,
+.company-internship-form textarea:focus {
+  outline: 2px solid #111827;
+  outline-offset: 1px;
+}
+
+.internship-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.internship-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.internship-form-error {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+@media (max-width: 640px) {
+  .company-internship-form {
+    padding: 18px;
+  }
+
+  .internship-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .internship-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .internship-form-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}

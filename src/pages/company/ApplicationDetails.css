@@ -1,0 +1,338 @@
+
+.application-details-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.application-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #666;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.application-back-button:hover {
+  color: #111;
+}
+
+.application-details-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.application-details-heading h1 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 32px);
+  letter-spacing: -1px;
+}
+
+.application-details-heading p {
+  margin: 8px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.application-details-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+  align-items: start;
+  gap: 20px;
+}
+
+.application-details-main,
+.application-details-side {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.application-detail-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.application-detail-card > h2 {
+  margin: 0 0 18px;
+  font-size: 15px;
+}
+
+.application-profile-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.application-profile-avatar {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 15px;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.application-profile-top h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.application-profile-top p {
+  margin: 6px 0 0;
+  color: #777;
+  font-size: 12px;
+}
+
+.application-candidate-bio {
+  margin: 20px 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.application-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.application-skills span {
+  padding: 7px 10px;
+  border: 1px solid #e7e7e7;
+  border-radius: 7px;
+  background: #fafafa;
+  color: #555;
+  font-size: 11px;
+}
+
+.application-info-list {
+  display: grid;
+  gap: 16px;
+}
+
+.application-info-list > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: #555;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.application-info-list svg {
+  flex-shrink: 0;
+  color: #888;
+}
+
+.application-education-row,
+.application-internship-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.application-detail-icon,
+.application-document-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+  background: #f5f5f5;
+  color: #555;
+}
+
+.application-education-row strong,
+.application-internship-summary strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.application-education-row p,
+.application-internship-summary p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.application-documents {
+  display: grid;
+  gap: 12px;
+}
+
+.application-document {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 9px;
+}
+
+.application-document-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.application-document-info strong,
+.application-document-info span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.application-document-info strong {
+  font-size: 12px;
+}
+
+.application-document-info span {
+  margin-top: 5px;
+  color: #888;
+  font-size: 11px;
+}
+
+.application-download-button {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: white;
+  color: #444;
+  cursor: pointer;
+}
+
+.application-applied-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+  color: #777;
+  font-size: 11px;
+}
+
+.application-decision-label {
+  display: block;
+  margin: 16px 0 8px;
+  color: #555;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.application-decision-select,
+.application-review-notes {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e4e4e4;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+  font-size: 12px;
+}
+
+.application-decision-select {
+  height: 42px;
+  padding: 0 11px;
+}
+
+.application-review-notes {
+  padding: 11px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.application-save-decision {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 43px;
+  margin-top: 15px;
+  border: 1px solid #171717;
+  border-radius: 8px;
+  background: #171717;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.application-save-decision:hover {
+  background: #333;
+}
+
+.application-decision-help {
+  margin: 11px 0 0;
+  color: #888;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.application-not-found {
+  padding: 60px 20px;
+  color: #777;
+  text-align: center;
+}
+
+.application-not-found h1 {
+  color: #171717;
+  font-size: 22px;
+}
+
+.application-not-found p {
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .application-details-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .application-details-side {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .application-details-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .application-detail-card {
+    padding: 17px;
+  }
+
+  .application-profile-top h2 {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,306 @@
+
+.school-reports {
+  --report-accent: #6547ff;
+}
+
+.school-report-eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  color: #858591;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.2px;
+}
+
+.school-reports .school-page-heading > div {
+  min-width: 0;
+}
+
+.school-reports .school-page-heading p {
+  max-width: 650px;
+  font-size: 12px;
+}
+
+.school-report-export-all {
+  flex-shrink: 0;
+  background: #25252b !important;
+  color: #fff !important;
+  border-color: #25252b !important;
+  font-size: 11px !important;
+  font-weight: 650;
+}
+
+.school-report-export-all:hover {
+  background: #414149 !important;
+}
+
+.school-report-demo-notice {
+  padding: 12px 14px;
+  border: 1px solid #e8e2ff;
+  border-radius: 9px;
+  background: #f5f2ff;
+  color: #65529f;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.school-report-filters {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.school-report-filters label {
+  display: grid;
+  gap: 7px;
+  min-width: 150px;
+  color: #737780;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.school-report-filters select {
+  min-width: 150px;
+  color: #33343a;
+  font-size: 12px;
+}
+
+.school-reports .school-page-stats article {
+  position: relative;
+}
+
+.school-reports .school-page-stats article > svg {
+  box-sizing: content-box;
+  padding: 9px;
+  border-radius: 10px;
+  background: #f0edff;
+  color: var(--report-accent);
+}
+
+.school-reports .school-page-stats article > small {
+  color: #92929d;
+  font-size: 10px;
+}
+
+.school-report-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.school-report-section-heading > div {
+  display: grid;
+  gap: 7px;
+}
+
+.school-report-section-heading p {
+  margin: 0;
+  color: #777b84;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.school-report-section-heading > svg {
+  flex-shrink: 0;
+  color: var(--report-accent);
+}
+
+.school-report-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.school-report-overview > div {
+  display: grid;
+  gap: 9px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #ededf1;
+  border-radius: 10px;
+  background: #fafafd;
+}
+
+.school-report-overview span {
+  color: #777b84;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.school-report-overview strong {
+  font-size: 24px;
+  letter-spacing: -0.5px;
+}
+
+.school-report-bars {
+  display: grid;
+  gap: 23px;
+}
+
+.school-reports .school-report-row {
+  gap: 11px;
+}
+
+.school-reports .school-report-label {
+  align-items: baseline;
+}
+
+.school-report-label strong {
+  color: #303038;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.school-reports .school-report-label span {
+  font-size: 11px;
+}
+
+.school-reports .school-report-track > div {
+  background: var(--report-accent);
+  transition: width 180ms ease;
+}
+
+.school-report-status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.school-report-status-grid article {
+  display: grid;
+  gap: 11px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #ededf1;
+  border-radius: 10px;
+}
+
+.school-report-status-grid article > span {
+  color: #777b84;
+  font-size: 12px;
+}
+
+.school-report-status-grid article > strong {
+  font-size: 26px;
+  letter-spacing: -0.5px;
+}
+
+.school-report-status-grid article > small {
+  color: #858591;
+  font-size: 10px;
+}
+
+.school-report-download-list {
+  display: grid;
+}
+
+.school-report-download-list article {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ededf1;
+}
+
+.school-report-download-list article:first-child {
+  padding-top: 0;
+}
+
+.school-report-download-list article:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.school-report-file-icon {
+  display: grid;
+  place-items: center;
+  width: 41px;
+  height: 41px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #f0edff;
+  color: var(--report-accent);
+}
+
+.school-report-file-info {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 5px;
+}
+
+.school-report-file-info strong {
+  font-size: 12px;
+}
+
+.school-report-file-info span {
+  color: #858591;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.school-report-download-list article > button {
+  flex-shrink: 0;
+  font-size: 11px;
+}
+
+.school-report-feedback {
+  margin: 0;
+  color: #65529f;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .school-report-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .school-reports .school-page-heading {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .school-report-export-all {
+    width: 100%;
+  }
+
+  .school-report-filters {
+    flex-direction: column;
+  }
+
+  .school-report-filters label,
+  .school-report-filters select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .school-report-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .school-report-download-list article {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .school-report-file-info span {
+    font-size: 10px;
+  }
+
+  .school-report-download-list article > button {
+    padding: 8px;
+  }
+
+  .school-report-download-list article > button span {
+    display: none;
+  }
+
+  .school-reports .school-report-label {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,1019 @@
+.school-dashboard {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  color: #222227;
+  font-size: 13px;
+}
+
+/* Page heading */
+
+.school-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.school-page-heading {
+  min-width: 0;
+}
+
+.school-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+  color: #777781;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.35px;
+}
+
+.school-page-heading h1 {
+  margin: 0;
+  color: #202024;
+  font-size: clamp(25px, 2.1vw, 32px);
+  font-weight: 720;
+  letter-spacing: -1.1px;
+  line-height: 1.2;
+}
+
+.school-page-heading > p {
+  margin: 9px 0 0;
+  color: #81818a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.school-page-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.school-current-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #7d7d86;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.school-primary-button {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 16px;
+  border: 1px solid #202024;
+  border-radius: 9px;
+  background: #202024;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 650;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.school-primary-button:hover {
+  background: #39393f;
+  transform: translateY(-1px);
+}
+
+/* Welcome banner */
+
+.school-welcome-banner {
+  position: relative;
+  min-height: 218px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  overflow: hidden;
+  padding: 30px 34px;
+  margin-bottom: 20px;
+  border: 1px solid #27272a;
+  border-radius: 15px;
+  background: #202022;
+  color: #ffffff;
+}
+
+.school-welcome-copy {
+  position: relative;
+  z-index: 2;
+  width: min(520px, 65%);
+}
+
+.school-banner-eyebrow {
+  color: #b8b8c0;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.4px;
+}
+
+.school-welcome-copy h2 {
+  max-width: 440px;
+  margin: 18px 0 12px;
+  color: #ffffff;
+  font-size: clamp(23px, 2.2vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 1.25;
+}
+
+.school-welcome-copy > p {
+  max-width: 410px;
+  margin: 0;
+  color: #b8b8bf;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.school-banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.school-banner-link:hover {
+  color: #d0c8ff;
+}
+
+.school-banner-link svg {
+  transition: transform 160ms ease;
+}
+
+.school-banner-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* Decorative illustration */
+
+.school-banner-illustration {
+  position: relative;
+  width: 240px;
+  height: 180px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  margin-right: 12px;
+}
+
+.school-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.school-orbit-one {
+  width: 164px;
+  height: 164px;
+}
+
+.school-orbit-two {
+  width: 124px;
+  height: 124px;
+}
+
+.school-graduation-icon {
+  width: 94px;
+  height: 94px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 25px;
+  background: #303034;
+  color: #ffffff;
+  transform: rotate(-7deg);
+}
+
+.school-floating-label {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 13px;
+  border: 1px solid #eeeeef;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #303036;
+  box-shadow: 0 5px 18px rgb(0 0 0 / 10%);
+  font-size: 10px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.school-floating-top {
+  top: 19px;
+  right: -5px;
+}
+
+.school-floating-top svg {
+  color: #16a36a;
+}
+
+.school-floating-bottom {
+  bottom: 20px;
+  left: -5px;
+}
+
+.school-floating-bottom svg {
+  color: #6556df;
+}
+
+/* Statistic cards */
+
+.school-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.school-stat-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #e7e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.school-stat-card:hover {
+  border-color: #d8d8e0;
+  box-shadow: 0 7px 20px rgb(25 25 35 / 4%);
+  transform: translateY(-2px);
+}
+
+.school-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.school-stat-icon {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.school-stat-icon.blue {
+  background: #edf4ff;
+  color: #3980ed;
+}
+
+.school-stat-icon.purple {
+  background: #f2edff;
+  color: #8562e8;
+}
+
+.school-stat-icon.orange {
+  background: #fff3e7;
+  color: #e58a34;
+}
+
+.school-stat-icon.green {
+  background: #e8f8ef;
+  color: #1a9d68;
+}
+
+.school-stat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 5px 7px;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.school-stat-badge.blue {
+  background: #edf4ff;
+  color: #3777dd;
+}
+
+.school-stat-badge.purple {
+  background: #f2edff;
+  color: #815ce2;
+}
+
+.school-stat-badge.orange {
+  background: #fff3e7;
+  color: #c77928;
+}
+
+.school-stat-badge.green {
+  background: #e8f8ef;
+  color: #178e5e;
+}
+
+.school-stat-label {
+  margin: 0 0 10px;
+  color: #777780;
+  font-size: 11px;
+}
+
+.school-stat-value {
+  display: block;
+  color: #222227;
+  font-size: clamp(25px, 2vw, 31px);
+  font-weight: 730;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.school-stat-detail {
+  display: block;
+  margin-top: 9px;
+  color: #9999a1;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* Shared panels and section headings */
+
+.school-dashboard-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(290px, 0.95fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+
+.school-dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(290px, 0.8fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.school-panel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.school-section-heading {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 17px 19px;
+  border-bottom: 1px solid #f0f0f3;
+}
+
+.school-section-heading > div {
+  min-width: 0;
+}
+
+.school-section-heading h2 {
+  margin: 0;
+  color: #28282d;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.school-section-heading p {
+  margin: 5px 0 0;
+  color: #92929b;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.school-text-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 7px;
+  color: #333339;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.school-text-link:hover {
+  color: #6752dc;
+}
+
+.school-placement-heading-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 9px;
+  background: #f0edff;
+  color: #7561df;
+}
+
+/* Applications table */
+
+.school-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.school-applications-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.school-applications-table thead {
+  background: #fafafd;
+}
+
+.school-applications-table th {
+  padding: 13px 15px;
+  border-bottom: 1px solid #eeeeF2;
+  color: #9999a3;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.65px;
+  white-space: nowrap;
+}
+
+.school-applications-table td {
+  padding: 14px 15px;
+  border-bottom: 1px solid #f0f0f3;
+  color: #777780;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+.school-applications-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.school-applications-table tbody tr:hover {
+  background: #fcfcfe;
+}
+
+.school-student-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 175px;
+}
+
+.school-student-avatar {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #e9e9ed;
+  border-radius: 10px;
+  background: #f3f3f6;
+  color: #565660;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.school-student-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.school-student-info strong {
+  color: #303036;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.school-student-info > span {
+  max-width: 200px;
+  overflow: hidden;
+  color: #96969f;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.school-company-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 135px;
+  color: #666670;
+  white-space: nowrap;
+}
+
+.school-company-cell svg {
+  flex-shrink: 0;
+  color: #a0a0a9;
+}
+
+.school-application-date {
+  white-space: nowrap;
+}
+
+.school-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.school-status-badge > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.school-status-badge.review {
+  background: #fff4df;
+  color: #ae741b;
+}
+
+.school-status-badge.shortlisted {
+  background: #e9f7ed;
+  color: #29844b;
+}
+
+.school-status-badge.pending {
+  background: #f1f1f4;
+  color: #71717b;
+}
+
+.school-status-badge.placed {
+  background: #e8f7ef;
+  color: #168757;
+}
+
+.school-panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 18px;
+  border-top: 1px solid #eeeeF2;
+  color: #96969f;
+  font-size: 10px;
+}
+
+.school-panel-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #414149;
+  text-decoration: none;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+/* Placement progress */
+
+.school-placement-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.school-placement-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px 20px 12px;
+}
+
+.school-placement-summary strong {
+  color: #25252a;
+  font-size: 32px;
+  font-weight: 730;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.school-placement-summary > span {
+  color: #90909a;
+  font-size: 10px;
+}
+
+.school-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding: 14px 20px 22px;
+}
+
+.school-progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.school-progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #757580;
+  font-size: 10px;
+}
+
+.school-progress-meta strong {
+  color: #393940;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.school-progress-track {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #f0f0f4;
+}
+
+.school-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.school-progress-fill.purple {
+  background: #8967e8;
+}
+
+.school-progress-fill.blue {
+  background: #4d8df0;
+}
+
+.school-progress-fill.orange {
+  background: #e8a04b;
+}
+
+.school-progress-fill.green {
+  background: #2ca977;
+}
+
+.school-placement-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding: 15px 20px;
+  border-top: 1px solid #eeeeF2;
+  color: #34343b;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.school-placement-link:hover {
+  background: #fafafd;
+  color: #6752dc;
+}
+
+/* Upcoming tasks */
+
+.school-tasks-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #b8792c;
+  font-size: 10px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.school-task-list {
+  padding: 3px 19px;
+}
+
+.school-task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f3;
+  color: inherit;
+  text-decoration: none;
+}
+
+.school-task-item:last-child {
+  border-bottom: 0;
+}
+
+.school-task-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.school-task-icon.orange {
+  background: #fff3e7;
+  color: #d98b38;
+}
+
+.school-task-icon.blue {
+  background: #edf4ff;
+  color: #4d84e6;
+}
+
+.school-task-icon.purple {
+  background: #f1edff;
+  color: #8465e4;
+}
+
+.school-task-copy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.school-task-copy strong {
+  color: #303037;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.school-task-copy > span {
+  color: #92929b;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.school-task-arrow {
+  flex-shrink: 0;
+  color: #aaaab3;
+  transition:
+    transform 160ms ease,
+    color 160ms ease;
+}
+
+.school-task-item:hover .school-task-arrow {
+  color: #6752dc;
+  transform: translateX(3px);
+}
+
+/* Quick actions */
+
+.school-quick-actions {
+  padding: 4px 18px 10px;
+}
+
+.school-quick-action {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 0;
+  border-bottom: 1px solid #f0f0f3;
+  color: inherit;
+  text-decoration: none;
+}
+
+.school-quick-action:last-child {
+  border-bottom: 0;
+}
+
+.school-quick-action-icon {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #e9e9ed;
+  border-radius: 10px;
+  background: #fafafd;
+  color: #55555f;
+}
+
+.school-quick-action > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.school-quick-action strong {
+  color: #34343a;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.school-quick-action small {
+  color: #92929b;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.school-quick-action > svg {
+  flex-shrink: 0;
+  color: #a0a0a9;
+  transition:
+    transform 160ms ease,
+    color 160ms ease;
+}
+
+.school-quick-action:hover > svg {
+  color: #6752dc;
+  transform: translate(2px, -2px);
+}
+
+.school-quick-action:hover strong {
+  color: #6752dc;
+}
+
+/* Demo-data note */
+
+.school-dashboard-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: #90909a;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.school-dashboard-note svg {
+  flex-shrink: 0;
+}
+
+/* Responsive layout */
+
+@media (min-width: 1500px) {
+  .school-dashboard {
+    max-width: 1700px;
+  }
+
+  .school-stat-card {
+    padding: 21px;
+  }
+
+  .school-welcome-banner {
+    min-height: 230px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .school-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .school-dashboard-main-grid,
+  .school-dashboard-bottom-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .school-placement-panel {
+    min-height: 0;
+  }
+
+  .school-progress-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .school-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .school-page-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .school-welcome-banner {
+    min-height: 0;
+    padding: 26px 22px;
+  }
+
+  .school-welcome-copy {
+    width: 100%;
+  }
+
+  .school-banner-illustration {
+    display: none;
+  }
+
+  .school-stat-card {
+    padding: 15px;
+  }
+
+  .school-stat-top {
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .school-stat-badge {
+    font-size: 8px;
+  }
+
+  .school-section-heading {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .school-stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .school-stat-card {
+    padding: 16px;
+  }
+
+  .school-stat-top {
+    margin-bottom: 12px;
+  }
+
+  .school-dashboard-note {
+    align-items: flex-start;
+  }
+
+  .school-progress-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .school-current-date {
+    font-size: 10px;
+  }
+
+  .school-primary-button {
+    min-height: 39px;
+    padding: 0 11px;
+    font-size: 11px;
+  }
+
+  .school-welcome-copy h2 {
+    font-size: 24px;
+  }
+
+  .school-panel-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .school-task-list {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .school-quick-actions {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .school-dashboard *,
+  .school-dashboard *::before,
+  .school-dashboard *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
