@@ -88,7 +88,7 @@ export default function SchoolSidebar({ onNavigate }) {
                   <NavLink
                     key={item.path}
                     to={item.path}
-                    end
+                    end={item.path === '/school/dashboard'}
                     onClick={onNavigate}
                     className={({ isActive }) =>
                       `school-nav-link${isActive ? ' school-nav-link-active' : ''}`

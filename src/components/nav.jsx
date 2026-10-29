@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 
 import './nav.css'
-import InternmiIcon from '../assets/icons/internmi-logo.svg'
+import umunaraIcon from '../assets/icons/umunara-logo.svg'
 import NotificationCenter from '../pages/student/NotificationCenter'
 
 function Nav({ onMenuClick, menuOpen = false }) {
@@ -124,12 +124,12 @@ const profilePath = isCompany
         <NavLink
           to={homePath}
           className="logo"
-          aria-label="Internmi home"
+          aria-label="Umunaralink home"
         >
-          <img src={InternmiIcon} alt="Internmi logo" />
+          <img src={umunaraIcon} alt="Umunaralink logo" />
         </NavLink>
 
-        <span className="brand-name">Intern<span style={{ color: '#0c7bfa', fontWeight: 'bold', fontSize: '1.30rem' }}>mi</span></span>
+        <span className="brand-name">Umunara<span style={{ color: '#0c7bfa', fontWeight: 'bold', fontSize: '1.2rem' }}>link</span></span>
       </div>
 
       <div className="middle-nav">

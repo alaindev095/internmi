@@ -1,4 +1,4 @@
-
+import { useState } from 'react'
 import { Outlet, NavLink } from 'react-router-dom'
 import {
   House,
@@ -20,9 +20,18 @@ const mobileLinks = [
 ]
 
 function StudentLayout() {
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
+  function closeSidebar() {
+    setSidebarOpen(false)
+  }
+
   return (
     <div className="student-layout">
-      <Nav />
+      <Nav
+        onMenuClick={() => setSidebarOpen((open) => !open)}
+        menuOpen={sidebarOpen}
+      />
 
       <nav className="mobile-navigation" aria-label="Student navigation">
         {mobileLinks.map(({ label, to, Icon }) => (
@@ -41,7 +50,7 @@ function StudentLayout() {
       </nav>
 
       <div className="student-layout-body">
-        <Sidebar />
+        <Sidebar open={sidebarOpen} onClose={closeSidebar} />
 
         <main className="student-main">
           <Outlet />

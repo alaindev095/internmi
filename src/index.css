@@ -358,10 +358,16 @@ main,
   background: transparent;
 }
 
+/* Navbar is shorter on phones; layouts read this variable */
+@media (max-width: 600px) {
+  :root {
+    --nav-height: 64px;
+  }
+}
+
 /* 14. Responsive layout */
 @media (max-width: 768px) {
   :root {
-    --nav-height: 72px;
     --sidebar-width: 0px;
   }
 

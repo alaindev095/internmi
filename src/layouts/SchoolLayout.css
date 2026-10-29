@@ -1,142 +1,128 @@
+/* School portal layout: same pattern as CompanyLayout
+   (fixed navbar, fixed sidebar on desktop, slide-in drawer on mobile). */
 
-.student-layout {
-  --student-header-height: 72px;
-  --student-sidebar-width: 250px;
+.school-layout {
+  --school-sidebar-width: 216px;
 
-  width: 100%;
+  position: relative;
   height: 100vh;
   height: 100dvh;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   background: #f8f9fb;
   color: #202124;
+  font-family: inherit;
 }
 
-.student-layout > .navbar {
-  position: relative;
-  z-index: 400;
-  flex: 0 0 var(--student-header-height);
-}
-
-.student-layout-body {
+.school-workspace {
   display: flex;
-  flex: 1 1 auto;
-  width: 100%;
-  min-height: 0;
+  align-items: stretch;
+  height: 100%;
+  padding-top: var(--nav-height, 72px);
+  box-sizing: border-box;
   overflow: hidden;
 }
 
-.student-layout-body > .sidebar {
-  flex: 0 0 var(--student-sidebar-width);
-  width: var(--student-sidebar-width);
-  min-width: 0;
-  height: 100%;
-  min-height: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+/* Sidebar: fixed column on desktop */
+.school-sidebar-container {
+  position: fixed;
+  top: var(--nav-height, 72px);
+  left: 0;
+  bottom: 0;
+  z-index: 900;
+  width: var(--school-sidebar-width);
   background: #fff;
-  border-right: 1px solid #e9e9ed;
 }
 
-.student-main {
-  flex: 1 1 0;
-  width: 0;
-  min-width: 0;
-  min-height: 0;
-  height: 100%;
-  margin: 0;
-  padding: 24px 26px 32px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior-y: contain;
-  background: #f8f9fb;
-}
-
-.student-main > * {
-  min-width: 0;
-  max-width: 100%;
-}
-
-.mobile-navigation {
+.school-sidebar-overlay {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .student-layout {
-    --student-header-height: 64px;
-  }
-
-  .student-layout > .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--student-header-height);
-    min-height: var(--student-header-height);
-  }
-
-  .mobile-navigation {
-    position: fixed;
-    z-index: 390;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    min-height: 62px;
-    padding: 6px 4px max(6px, env(safe-area-inset-bottom));
-    border-top: 1px solid #e9e9ed;
-    background: #fff;
-  }
-
-  .mobile-navigation-link {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    color: #737373;
-    font-size: 11px;
-    text-decoration: none;
-  }
-
-  .mobile-navigation-link.active {
-    color: #6547ff;
-    font-weight: 600;
-  }
-
-  .student-layout-body {
-    flex: 1;
-    min-height: 0;
-    margin-top: var(--student-header-height);
-  }
-
-  .student-layout-body > .sidebar {
-    display: none;
-  }
-
-  .student-main {
-    width: 100%;
-    padding: 20px 16px 88px;
-  }
+/* Main area scrolls independently */
+.school-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  height: calc(100dvh - var(--nav-height, 72px));
+  margin-left: var(--school-sidebar-width);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
 }
 
-@media (max-width: 380px) {
-  .student-main {
-    padding-right: 12px;
-    padding-left: 12px;
+.school-content {
+  flex: 1;
+  min-width: 0;
+  padding: 28px;
+  box-sizing: border-box;
+  background: #f8f9fb;
+}
+
+/* These pages already add their own 28px padding */
+.school-content > .school-page {
+  margin: -28px;
+}
+
+.school-content > * {
+  min-width: 0;
+}
+
+.school-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 17px 28px;
+  border-top: 1px solid #ededed;
+  background: #fff;
+  color: #85858d;
+  font-size: 11px;
+}
+
+/* Mobile: sidebar becomes a drawer opened by the menu button */
+@media (max-width: 768px) {
+  .school-main {
+    width: 100%;
+    margin-left: 0;
   }
 
-  .mobile-navigation-link {
-    font-size: 10px;
+  .school-sidebar-container {
+    z-index: 1200;
+    width: min(280px, 85vw);
+    transform: translateX(-100%);
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: none;
+    transition: transform 0.25s ease, visibility 0.25s;
   }
 
-  .mobile-navigation-link svg {
-    width: 17px;
-    height: 17px;
+  .school-sidebar-container-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+    box-shadow: 10px 0 35px rgb(0 0 0 / 12%);
+  }
+
+  .school-sidebar-overlay {
+    position: fixed;
+    inset: var(--nav-height, 72px) 0 0;
+    z-index: 1100;
+    display: block;
+    width: 100%;
+    border: 0;
+    background: rgb(0 0 0 / 35%);
+  }
+
+  .school-content {
+    padding: 20px 14px;
+  }
+
+  .school-content > .school-page {
+    margin: -20px -14px;
+    padding: 20px 14px;
+  }
+
+  .school-footer {
+    padding: 16px 18px;
   }
 }

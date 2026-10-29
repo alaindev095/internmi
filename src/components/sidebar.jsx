@@ -33,13 +33,23 @@ const menuItems = [
 
 ]
 
-function Sidebar() {
+function Sidebar({ open = false, onClose }) {
   // Temporary demo user; replace with logged-in user data later.
   const userName = 'John Doe'
   const userEmail = 'john@example.com'
 
   return (
-    <aside className="sidebar">
+    <>
+      {open && (
+        <button
+          type="button"
+          className="student-sidebar-overlay"
+          aria-label="Close navigation"
+          onClick={onClose}
+        />
+      )}
+
+    <aside className={`sidebar${open ? ' is-open' : ''}`}>
       <div className="sidebar-section">
         <p className="sidebar-label">WORKSPACE</p>
 
@@ -50,6 +60,7 @@ function Sidebar() {
                 <NavLink
                   to={to}
                   end={label === 'Home'}
+                  onClick={onClose}
                   className={({ isActive }) =>
                     isActive ? 'active' : ''
                   }
@@ -71,13 +82,14 @@ function Sidebar() {
         </div>
 
         <div className="user-info">
-          <NavLink to="/student/profile">
+          <NavLink to="/student/profile" onClick={onClose}>
             <div className="name">{userName}</div>
             <div className="email">{userEmail}</div>
           </NavLink>
         </div>
       </div>
     </aside>
+    </>
   )
 }
 

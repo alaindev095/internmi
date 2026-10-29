@@ -259,15 +259,6 @@
   color: #25252b;
 }
 
-@media (max-width: 900px) {
-  .school-sidebar {
-    width: 240px;
-    min-width: 240px;
-    min-height: 100%;
-    border-right: 0;
-  }
-}
-
 @media (max-width: 600px) {
   .school-sidebar-navigation {
     padding-top: 18px;

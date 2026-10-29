@@ -1017,3 +1017,29 @@
     animation-duration: 0.01ms !important;
   }
 }
+
+/* SchoolPages.css also styles .school-page-heading globally (flex row).
+   Scope the dashboard heading so it is not overridden on mobile. */
+.school-dashboard .school-page-heading {
+  display: block;
+}
+
+.school-dashboard .school-page-heading h1 {
+  margin: 0;
+}
+
+.school-dashboard .school-page-heading > p {
+  margin: 9px 0 0;
+}
+
+@media (max-width: 760px) {
+  .school-dashboard .school-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .school-dashboard .school-page-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
