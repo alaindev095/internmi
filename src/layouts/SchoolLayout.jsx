@@ -42,10 +42,6 @@ export default function SchoolLayout() {
             <Outlet />
           </main>
 
-          <footer className="school-footer">
-            <span>© {new Date().getFullYear()} Internmi</span>
-            <span>Connecting students with internship opportunities.</span>
-          </footer>
         </div>
       </div>
     </div>

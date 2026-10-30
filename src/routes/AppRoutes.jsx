@@ -28,6 +28,26 @@ import SchoolStaff from '../pages/school/SchoolStaff'
 import SchoolSettings from '../pages/school/SchoolSettings'
 import SchoolClasses from '../pages/school/SchoolClasses'
 
+import ParentLayout from '../layouts/ParentLayout'
+import ParentDashboard from '../pages/parent/ParentDashboard'
+import ParentStudent from '../pages/parent/ParentStudent'
+import ParentApplications from '../pages/parent/ParentApplications'
+import ParentNotifications from '../pages/parent/ParentNotifications'
+import ParentProfile from '../pages/parent/ParentProfile'
+
+import AdminLayout from '../layouts/AdminLayout'
+import AdminDashboard from '../pages/admin/AdminDashboard'
+import AdminSchools from '../pages/admin/AdminSchools'
+import AdminSchoolDetail from '../pages/admin/AdminSchoolDetail'
+import AdminCompanies from '../pages/admin/AdminCompanies'
+import AdminInternships from '../pages/admin/AdminInternships'
+import AdminUsers from '../pages/admin/AdminUsers'
+import AdminReports from '../pages/admin/AdminReports'
+import AdminAnnouncements from '../pages/admin/AdminAnnouncements'
+import AdminAudit from '../pages/admin/AdminAudit'
+import AdminSettings from '../pages/admin/AdminSettings'
+import AdminProfile from '../pages/admin/AdminProfile'
+
 function AppRoutes() {
   return (
     <Routes>
@@ -69,6 +89,30 @@ function AppRoutes() {
         <Route path="user-profile" element={<EmployerProfile />} />
         <Route path="classes" element={<SchoolClasses />} />
         <Route path="classes/:id" element={<SchoolClasses />} />
+      </Route>
+
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<Navigate to="dashboard" replace />} />
+        <Route path="dashboard" element={<AdminDashboard />} />
+        <Route path="schools" element={<AdminSchools />} />
+        <Route path="schools/:id" element={<AdminSchoolDetail />} />
+        <Route path="companies" element={<AdminCompanies />} />
+        <Route path="internships" element={<AdminInternships />} />
+        <Route path="users" element={<AdminUsers />} />
+        <Route path="reports" element={<AdminReports />} />
+        <Route path="announcements" element={<AdminAnnouncements />} />
+        <Route path="audit" element={<AdminAudit />} />
+        <Route path="settings" element={<AdminSettings />} />
+        <Route path="profile" element={<AdminProfile />} />
+      </Route>
+
+      <Route path="/parent" element={<ParentLayout />}>
+        <Route index element={<Navigate to="dashboard" replace />} />
+        <Route path="dashboard" element={<ParentDashboard />} />
+        <Route path="student" element={<ParentStudent />} />
+        <Route path="applications" element={<ParentApplications />} />
+        <Route path="notifications" element={<ParentNotifications />} />
+        <Route path="profile" element={<ParentProfile />} />
       </Route>
 
       <Route

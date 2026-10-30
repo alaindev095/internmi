@@ -67,18 +67,6 @@
   min-width: 0;
 }
 
-.school-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 17px 28px;
-  border-top: 1px solid #ededed;
-  background: #fff;
-  color: #85858d;
-  font-size: 11px;
-}
-
 /* Mobile: sidebar becomes a drawer opened by the menu button */
 @media (max-width: 768px) {
   .school-main {
@@ -120,9 +108,5 @@
   .school-content > .school-page {
     margin: -20px -14px;
     padding: 20px 14px;
-  }
-
-  .school-footer {
-    padding: 16px 18px;
   }
 }

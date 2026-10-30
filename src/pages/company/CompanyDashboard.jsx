@@ -222,10 +222,6 @@ export default function CompanyDashboard() {
         </div>
       </section>
 
-      <footer className="company-dashboard-footer">
-        <span>Internmi Company Portal</span>
-        <span>Connecting companies with emerging talent.</span>
-      </footer>
     </div>
   );
 }

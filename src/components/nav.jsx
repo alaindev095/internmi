@@ -26,20 +26,32 @@ function Nav({ onMenuClick, menuOpen = false }) {
 
   const isCompany = location.pathname.startsWith('/company')
   const isSchool = location.pathname.startsWith('/school')
+  const isAdmin = location.pathname.startsWith('/admin')
+  const isParent = location.pathname.startsWith('/parent')
 
-  const homePath = isCompany
-    ? '/company/dashboard'
-    : isSchool
-      ? '/school/dashboard'
+const homePath = isAdmin
+  ? '/admin/dashboard'
+  : isCompany
+  ? '/company/dashboard'
+  : isSchool
+    ? '/school/dashboard'
+    : isParent
+      ? '/parent/dashboard'
       : '/student/dashboard'
 
-const profilePath = isCompany
+const profilePath = isAdmin
+  ? '/admin/profile'
+  : isCompany
   ? '/company/user-profile'
   : isSchool
     ? '/school/user-profile'
-    : '/student/profile'
+    : isParent
+      ? '/parent/profile'
+      : '/student/profile'
 
-  const searchPlaceholder = isCompany
+  const searchPlaceholder = isAdmin
+    ? 'Search schools, companies or users...'
+    : isCompany
     ? 'Search applications...'
     : isSchool
       ? 'Search students or internships...'
@@ -51,6 +63,10 @@ const profilePath = isCompany
 
   function getSearchDestination(query) {
     const encodedQuery = encodeURIComponent(query)
+
+    if (isAdmin) {
+      return `/admin/schools?search=${encodedQuery}`
+    }
 
     if (isCompany) {
       return `/company/applications?search=${encodedQuery}`
@@ -101,15 +117,19 @@ const profilePath = isCompany
   return (
     <nav className="navbar" aria-label="Main navigation">
       <div className="right-nav">
-        {(isCompany || isSchool || location.pathname.startsWith('/student')) && (
+        {(isAdmin || isCompany || isSchool || isParent || location.pathname.startsWith('/student')) && (
           <button
             type="button"
             className={`nav-action ${
-              isCompany
+              isAdmin
+              ? 'admin-menu-trigger'
+              : isCompany
               ? 'company-menu-trigger'
               : isSchool
                 ? 'school-menu-trigger'
-                : 'student-menu-trigger'
+                : isParent
+                  ? 'parent-menu-trigger'
+                  : 'student-menu-trigger'
             }`}
             aria-label={
               menuOpen ? 'Close navigation menu' : 'Open navigation menu'

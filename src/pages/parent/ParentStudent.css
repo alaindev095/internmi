@@ -1,0 +1,375 @@
+.parent-students-page {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 28px 32px 36px;
+  box-sizing: border-box;
+  color: #202124;
+}
+
+.parent-students-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.parent-students-eyebrow {
+  margin: 0 0 8px;
+  color: #6547ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.parent-students-header h1 {
+  margin: 0;
+  font-size: clamp(25px, 3vw, 32px);
+  line-height: 1.3;
+  letter-spacing: -0.04em;
+}
+
+.parent-students-header > div:first-child > p:last-child {
+  max-width: 560px;
+  margin: 9px 0 0;
+  color: #777987;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.parent-students-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  padding: 10px 13px;
+  border: 1px solid #e9eaf0;
+  border-radius: 10px;
+  background: #fff;
+  color: #606270;
+  font-size: 13px;
+}
+
+.parent-students-count svg {
+  color: #6547ff;
+}
+
+.parent-students-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+}
+
+.parent-student-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e6e7ee;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.parent-student-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px;
+}
+
+.parent-student-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #f0edff;
+  color: #6547ff;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.parent-student-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parent-student-identity {
+  min-width: 0;
+}
+
+.parent-student-identity h2 {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.parent-student-identity > p {
+  margin: 5px 0 9px;
+  color: #777987;
+  font-size: 12px;
+}
+
+.parent-student-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #377a54;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.parent-student-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #39a66b;
+}
+
+.parent-student-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 16px;
+  padding: 22px;
+  border-top: 1px solid #eeeef3;
+  border-bottom: 1px solid #eeeef3;
+}
+
+.parent-student-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.parent-student-detail > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #6547ff;
+}
+
+.parent-student-detail > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.parent-student-detail span,
+.parent-student-internship-copy > span {
+  color: #858795;
+  font-size: 12px;
+}
+
+.parent-student-detail strong {
+  overflow-wrap: anywhere;
+  color: #33343c;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.parent-student-internship {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+}
+
+.parent-student-internship-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #f0edff;
+  color: #6547ff;
+}
+
+.parent-student-internship-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.parent-student-internship-copy strong {
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.parent-student-view-link,
+.parent-student-back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #6547ff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.parent-student-view-link {
+  flex-shrink: 0;
+}
+
+.parent-student-view-link:hover,
+.parent-student-back-link:hover {
+  color: #5134e8;
+}
+
+.parent-student-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 52px 28px;
+  border: 1px solid #e6e7ee;
+  border-radius: 15px;
+  background: #fff;
+  text-align: center;
+}
+
+.parent-student-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 19px;
+  border-radius: 18px;
+  background: #f0edff;
+  color: #6547ff;
+}
+
+.parent-student-empty h2 {
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.parent-student-empty > p {
+  max-width: 510px;
+  margin: 0;
+  color: #777987;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.parent-student-empty-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 560px;
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f8f7ff;
+  color: #606270;
+  text-align: left;
+}
+
+.parent-student-empty-note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #6547ff;
+}
+
+.parent-student-empty-note span {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.parent-student-back-link {
+  margin-top: 23px;
+  padding: 11px 15px;
+  border-radius: 9px;
+  background: #6547ff;
+  color: #fff;
+  font-size: 13px;
+}
+
+.parent-student-back-link:hover {
+  background: #5134e8;
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .parent-students-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .parent-students-page {
+    padding: 24px 18px 30px;
+  }
+
+  .parent-students-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .parent-students-count {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .parent-students-page {
+    padding: 22px 14px 26px;
+  }
+
+  .parent-students-header {
+    margin-bottom: 20px;
+  }
+
+  .parent-student-card-header {
+    gap: 12px;
+    padding: 18px 15px;
+  }
+
+  .parent-student-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .parent-student-details {
+    gap: 18px 12px;
+    padding: 18px 15px;
+  }
+
+  .parent-student-detail {
+    gap: 7px;
+  }
+
+  .parent-student-detail strong {
+    font-size: 12px;
+  }
+
+  .parent-student-internship {
+    flex-wrap: wrap;
+    padding: 16px 15px;
+  }
+
+  .parent-student-internship-copy {
+    flex-basis: calc(100% - 60px);
+  }
+
+  .parent-student-view-link {
+    margin-left: 52px;
+  }
+
+  .parent-student-empty {
+    padding: 38px 17px;
+  }
+}

@@ -697,6 +697,8 @@
 /* Menu buttons: hidden on desktop, visible on mobile */
 .student-menu-trigger,
 .school-menu-trigger,
+.admin-menu-trigger,
+.parent-menu-trigger,
 .company-menu-trigger {
   display: none;
   flex-shrink: 0;
@@ -705,6 +707,8 @@
 @media (max-width: 768px) {
   .student-menu-trigger,
   .school-menu-trigger,
+  .admin-menu-trigger,
+  .parent-menu-trigger,
   .company-menu-trigger {
     display: inline-flex;
     align-items: center;
